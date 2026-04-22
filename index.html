@@ -398,10 +398,13 @@ const SYSTEM_PROMPT = `Tu es un assistant scientifique. L'utilisateur te fournit
 
 Ta tâche :
 1. Transformer ces notes en phrases déclaratives simples, claires et précises.
-2. Chaque phrase doit être AUTONOME et compréhensible indépendamment des autres, en y intégrant le contexte nécessaire (nom de l'étude, domaine, concept clé).
+2. Chaque phrase doit être TOTALEMENT AUTONOME : un lecteur qui ne lirait QUE cette phrase doit comprendre de quoi il est question, sans avoir lu les autres. Pour garantir cette autonomie, chaque phrase doit contenir explicitement le contexte nécessaire : nom ou type de l'étude ou de l'organisme concerné, domaine de recherche, population étudiée, concept clé. Ne jamais utiliser de pronoms ou de références implicites qui renverraient à une autre phrase (éviter "cette étude", "les auteurs", "ce standard", etc. — préciser à chaque fois de quelle étude, de quels auteurs, de quel standard il s'agit).
 3. Ne pas changer le sens des informations.
 4. Ne pas inventer de nouvelles données.
 5. Utiliser un registre scientifique neutre.
+
+Exemple de phrase NON autonome : "Cette étude montre que le mauvais rapport est corrélé à l'extrapolation des résultats."
+Exemple de phrase AUTONOME : "Dans les études précliniques sur les animaux, un mauvais rapport méthodologique est fréquemment corrélé à une extrapolation abusive des résultats vers d'autres populations ou contextes."
 
 Retourne uniquement la liste des phrases, une par ligne, sans numérotation ni puces.`;
 
