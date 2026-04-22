@@ -399,6 +399,7 @@ const SYSTEM_PROMPT = `Tu es un assistant scientifique. L'utilisateur te fournit
 Ta tâche :
 1. Transformer ces notes en phrases déclaratives simples, claires et précises.
 2. Chaque phrase doit être TOTALEMENT AUTONOME : un lecteur qui ne lirait QUE cette phrase doit comprendre de quoi il est question, sans avoir lu les autres. Pour garantir cette autonomie, chaque phrase doit contenir explicitement le contexte nécessaire : nom ou type de l'étude ou de l'organisme concerné, domaine de recherche, population étudiée, concept clé. Ne jamais utiliser de pronoms ou de références implicites qui renverraient à une autre phrase (éviter "cette étude", "les auteurs", "ce standard", etc. — préciser à chaque fois de quelle étude, de quels auteurs, de quel standard il s'agit).
+3. Lorsque les notes présentent une énumération (ex : "quatre facteurs influencent X", suivie d'une liste), chaque élément de la liste doit être formulé en reprenant explicitement le contexte de l'énumération. Par exemple : "L'un des facteurs qui influencent X dans [contexte] est [élément]." ou "Parmi les facteurs qui influencent X dans [contexte] figure [élément]." Ne jamais formuler un élément d'énumération comme s'il était autosuffisant sans rappeler à quoi il appartient.
 3. Ne pas changer le sens des informations.
 4. Ne pas inventer de nouvelles données.
 5. Utiliser un registre scientifique neutre.
